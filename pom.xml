@@ -18,6 +18,9 @@
     <hibernate.version>7.4.7.Final</hibernate.version>
     <mysql.version>8.0.33</mysql.version>
     <jackson.version>2.18.2</jackson.version>
+    <jakarta.servlet.version>6.1.0</jakarta.servlet.version>
+    <junit.jupiter.version>5.10.2</junit.jupiter.version>
+    <hamcrest.version>3.0</hamcrest.version>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -25,6 +28,11 @@
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-webmvc</artifactId>
+        <version>${spring.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-test</artifactId>
         <version>${spring.version}</version>
       </dependency>
       <!-- Spring ORM -->
@@ -84,7 +92,7 @@
       <dependency>
         <groupId>jakarta.servlet</groupId>
         <artifactId>jakarta.servlet-api</artifactId>
-        <version>6.1.0</version>
+        <version>${jakarta.servlet.version}</version>
         <scope>provided</scope>
       </dependency>
       <!-- Jackson for JSON -->
@@ -109,6 +117,18 @@
         <groupId>com.fasterxml.jackson.datatype</groupId>
         <artifactId>jackson-datatype-jsr310</artifactId>
         <version>${jackson.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter</artifactId>
+        <version>${junit.jupiter.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.hamcrest</groupId>
+        <artifactId>hamcrest</artifactId>
+        <version>${hamcrest.version}</version>
+        <scope>test</scope>
       </dependency>
     </dependencies>
   </dependencyManagement>
