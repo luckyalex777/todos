@@ -1,6 +1,7 @@
 package com.alexswd.todos.restservice.model;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
@@ -37,7 +38,7 @@ public class Project extends BaseEntity {
   }
 
   public List<Task> getTasks() {
-    return tasks;
+    return Collections.unmodifiableList(tasks);
   }
 
   public void setTasks(List<Task> tasks) {
@@ -45,7 +46,7 @@ public class Project extends BaseEntity {
   }
 
   public List<Project> getProjects() {
-    return projects;
+    return Collections.unmodifiableList(projects);
   }
 
   public void setProjects(List<Project> projects) {
